@@ -2,37 +2,67 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.CardsBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-sizing: border-box;
+  min-width: 400px;
+  padding: 20px;
+  margin: 20px auto;
+  border: solid 1px #eee;
+  box-shadow: 0px 2px 7px #333;
+}
+
+.Card img {
+  padding: 20px 0px;
+  display: block;
+  margin: auto;
+}
+
+.Card input,
+.Card button {
+  display: block;
+  width: 90%;
+  margin: auto;
+  font-size: 21px;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: solid 1px #333;
+}
+
+.Card button {
+  width: 60%;
+  font-size: 19px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #2d3436;
   color: white;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.Card button:hover {
+  background-color: #636e72;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.Card.done_yes {
+  border-color: #44bd32;
+  box-shadow: 0px 2px 7px #44bd32;
+}
+
+.Card.done_shown {
+  border-color: #e17055;
+  box-shadow: 0px 2px 7px #e17055;
+}
+
+@media (max-width: 1300px) {
+  .CardsBox {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
   }
 }
