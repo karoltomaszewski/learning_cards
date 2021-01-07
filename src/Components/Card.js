@@ -11,8 +11,6 @@ const Card = props =>{
         )
     }
 
-    console.log(props.done)
-
     return(
         <div className={"Card done_"+props.done}>
             <img src={props.img} alt={props.english}/>

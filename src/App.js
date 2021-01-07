@@ -23,9 +23,9 @@ class App extends Component{
     const words = [...this.state.words];
 
     const word = {...this.state.words[id]};
-    word.text = event.target.value;
+    word.text = event.target.value.toLowerCase();
 
-    if(event.target.value === this.state.words[id].polish){
+    if(event.target.value.toLowerCase() === this.state.words[id].polish){
       word.done = "yes";
     }
 
