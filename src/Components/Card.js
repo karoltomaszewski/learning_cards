@@ -6,7 +6,7 @@ const Card = props =>{
         polishPart = (
         <div>
             <input onChange={props.change} placeholder="Enter in Polish what it is"></input>
-            <button onClick={props.click}>Show me answer</button>
+            <button onClick={props.click}>Show me solution</button>
          </div>
         )
     }

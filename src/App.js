@@ -7,6 +7,8 @@ import CheeseImg from './Images/cheese.svg';
 import TomatoImg from './Images/tomato.svg';
 
 import Card from './Components/Card';
+import GithubMark from './Components/GithubMark';
+import Restart from './Components/Restart';
 
 class App extends Component{
   state = {
@@ -44,13 +46,26 @@ class App extends Component{
     this.setState({words: words});
   }
 
+  restartHandler = () =>{
+    this.setState(
+      {words:[
+        {polish: "ser", english: "cheese", img: CheeseImg, text: "", done: "no"},
+        {polish: "rower", english: "bicycle", img: BicycleImg, text: "", done: "no"},
+        {polish: "pomidor", english: "tomato", img: TomatoImg, text: "", done: "no"}
+      ]}
+    );
+  }
 
   render(){
-
+    let restartBtn = null;
+    if(this.state.words.findIndex(word => word.done==="no") === -1){
+      restartBtn = <Restart restartHandler={this.restartHandler}/>;
+    }
 
     return (
       <div className="App">
         <h1>Learning cards</h1>
+        <GithubMark />
         <div className="CardsBox">
           {
             this.state.words.map((word, index) =>{
@@ -68,6 +83,9 @@ class App extends Component{
             })
           }
         </div>
+        {
+          restartBtn
+        }
       </div>
     );
   }

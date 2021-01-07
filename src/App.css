@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.Content {
+  min-height: 100%;
+  position: relative;
+}
+
 .CardsBox {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -46,7 +51,7 @@
   transition: 0.3s;
 }
 
-.Card button:hover {
+button:hover {
   background-color: #636e72;
 }
 
@@ -58,6 +63,25 @@
 .Card.done_shown {
   border-color: #e17055;
   box-shadow: 0px 2px 7px #e17055;
+}
+
+.GithubMark:hover {
+  opacity: 0.85;
+}
+
+.Restart {
+  width: 25%;
+  min-width: 250px;
+  font-size: 21px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  border: solid 1px #333;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  background-color: #2d3436;
+  color: white;
+  transition: 0.3s;
 }
 
 @media (max-width: 1300px) {
