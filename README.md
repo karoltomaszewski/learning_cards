@@ -5,5 +5,5 @@ You can test it live [here](http://learningcards.herokuapp.com/)
 
 # Photos
 
-![Photo](./Photo.jpg)
-![Photo2](./Photo2.jpg)
+![Photo](./Photo.png)
+![Photo2](./Photo2.png)
